@@ -132,7 +132,7 @@ begin
         w_reset <= '1'; w_C <= '1';
             wait for k_clk_period;
         w_reset <= '0';
-          assert w_stoplight = "010" report "bad reset" severity failure;
+            assert w_stoplight = "010" report "bad reset" severity failure;
         wait for k_clk_period;
             assert w_stoplight = "100" report "skipped red after yellow" severity failure;
         wait for k_clk_period;
